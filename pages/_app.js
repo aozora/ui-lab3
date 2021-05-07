@@ -1,4 +1,4 @@
-import '@/styles/globals.scss';
+import '@/styles/app.scss';
 import { Helmet } from 'react-helmet';
 
 function MyApp({ Component, pageProps }) {
