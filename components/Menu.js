@@ -1,13 +1,31 @@
+import styles from './Menu.module.scss';
+
 const Menu = () => {
   return (
-    <header>
+    <header className={styles.Menu}>
       <a href="/">Gantan</a>
       <nav>
         <ul>
-          <a href="/">Reflexologie</a>
-          <a href="/">Massage</a>
-          <a href="/">Physioscan</a>
-          <a href="/">Contact</a>
+          <li className={styles.MenuItem}>
+            <a href="/" className={styles.MenuLink}>
+              Reflexologie
+            </a>
+          </li>
+          <li className={styles.MenuItem}>
+            <a href="/" className={styles.MenuLink}>
+              Massage
+            </a>
+          </li>
+          <li className={styles.MenuItem}>
+            <a href="/" className={styles.MenuLink}>
+              Physioscan
+            </a>
+          </li>
+          <li className={styles.MenuItem}>
+            <a href="/" className={styles.MenuLink}>
+              Contact
+            </a>
+          </li>
         </ul>
       </nav>
     </header>

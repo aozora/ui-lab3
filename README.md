@@ -2,6 +2,8 @@
 
 UI Challenge rebuilding the layout of https://www.tangan.fr/
 
+[Hero Photo by Anete Lusina from Pexels](https://www.pexels.com/photo/crop-masseuse-putting-stones-on-back-of-client-5240697/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
+[Home Video by Video by cottonbro from Pexels](https://www.pexels.com/video/hands-woman-relaxation-luxury-3998277/)
 ---
 
 

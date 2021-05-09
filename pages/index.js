@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import Home from '@/components/Home';
+import Menu from '@/components/Menu';
+import Hero from '@/components/Hero';
 
 export default function Index() {
   return (
@@ -37,7 +38,8 @@ export default function Index() {
         />
       </Head>
 
-      <Home />
+      <Menu />
+      <Hero />
     </>
   );
 }

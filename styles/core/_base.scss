@@ -29,7 +29,7 @@ body {
 
 html {
   height: 100%;
-  font-size: 112.5%;
+  font-size: 100%;
   scroll-behavior: smooth;
 
   // Use smooth scrolling for anchor links—but not if the reduce motion accessibility preference is enabled
@@ -43,11 +43,11 @@ html {
 */
 :root {
   @include media('>=tablet', '<desktop') {
-    --text-base-size: 1.111rem;
+    --text-base-size: 1rem;
     --text-scale-ratio: 1.25;
   }
   @include media('>=desktop') {
-    --text-base-size: 1.222rem;
+    --text-base-size: 1rem;
     --text-scale-ratio: 1.25;
   }
 }
