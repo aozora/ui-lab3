@@ -18,17 +18,22 @@ const Hero = () => {
             <li>Contact</li>
           </ul>
         </div>
+        <div className={styles.HeroScrollButtonContainer}>
+          <a className={styles.HeroScrollButton} href="#">
+            ›
+          </a>
+        </div>
       </footer>
-      <figure>
+      <figure className={styles.HeroPictureContainer}>
         <img
           className={styles.HeroPicture}
           sizes="(max-width: 1900px) 100vw, 1900px"
           srcSet="
-pexels-anete-lusina-5240697_hhe07n_c_scale,w_320.jpg 320w,
-pexels-anete-lusina-5240697_hhe07n_c_scale,w_1503.jpg 1503w,
-pexels-anete-lusina-5240697_hhe07n_c_scale,w_1742.jpg 1742w,
-pexels-anete-lusina-5240697_hhe07n_c_scale,w_1900.jpg 1900w"
-          src="pexels-anete-lusina-5240697_hhe07n_c_scale,w_1900.jpg"
+pexels-koolshooters-6628599_fkydwb_c_scale,w_320.jpg 320w,
+pexels-koolshooters-6628599_fkydwb_c_scale,w_1060.jpg 1060w,
+pexels-koolshooters-6628599_fkydwb_c_scale,w_1588.jpg 1588w,
+pexels-koolshooters-6628599_fkydwb_c_scale,w_1900.jpg 1900w"
+          src="pexels-koolshooters-6628599_fkydwb_c_scale,w_1900.jpg"
           alt=""
         />
       </figure>
