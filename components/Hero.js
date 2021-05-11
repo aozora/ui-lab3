@@ -4,7 +4,9 @@ import styles from './Hero.module.scss';
 
 const Hero = () => {
   const titleRef = useRef();
+  const subTitleRef = useRef();
   const pictureRef = useRef();
+  const marqueeRef = useRef();
   const isClient = typeof window !== 'undefined';
 
   const timeline = useMemo(() => {
@@ -13,23 +15,40 @@ const Hero = () => {
 
   useEffect(() => {
     if (isClient && pictureRef.current) {
+      gsap.set(titleRef.current, { y: '100%' });
+
       timeline.fromTo(
         pictureRef.current,
         {
           scale: 1.2
         },
         {
-          duration: 2.5,
+          duration: 1.5,
           scale: 1,
           ease: 'power1.out'
         }
       );
       timeline.to(pictureRef.current, {
-        delay: 0.5,
+        delay: 0.2,
         duration: 2,
         y: '-50%',
         ease: 'power1.out'
       });
+      timeline.to([titleRef.current, subTitleRef.current], {
+        y: 0,
+        duration: 1,
+        ease: 'power1.out'
+      });
+      timeline.to(
+        marqueeRef.current,
+        {
+          height: 'auto',
+          opacity: 1,
+          duration: 1,
+          ease: 'power1.out'
+        },
+        '<'
+      );
       timeline.play();
     }
   }, [isClient, pictureRef, timeline]);
@@ -40,9 +59,11 @@ const Hero = () => {
         <h1 ref={titleRef}>
           Gantan<span className={styles.HeroTitleAsterisk}>*</span>
         </h1>
-        <span className={styles.HeroSubTitle}>* lorem ipsum</span>
+        <span ref={subTitleRef} className={styles.HeroSubTitle}>
+          * lorem ipsum
+        </span>
       </div>
-      <footer className={styles.HeroMarquee}>
+      <footer ref={marqueeRef} className={styles.HeroMarquee}>
         <div className={styles.HeroMarqueeContainer}>
           <ul>
             <li>Reflexologie</li>

@@ -230,7 +230,7 @@ a:not([class]) {
   &:link {
     color: var(--color-primary);
     text-decoration: underline;
-    text-decoration-color: var(--color-pantone);
+    text-decoration-color: var(--color-light-gray);
     text-decoration-thickness: 0.2rem;
   }
 
@@ -238,7 +238,7 @@ a:not([class]) {
   &:hover {
     //text-decoration-thickness: 0.5rem;
     color: var(--color-white);
-    background-color: var(--color-pantone);;
+    background-color: var(--color-light-gray);;
   }
 
   > * {
@@ -280,7 +280,7 @@ blockquote {
   margin: calc(.5 * var(--text-base-size)) 5% calc(1 * var(--text-base-size)) calc(.5 * var(--text-base-size));
   transition: all linear 0.2s;
   padding-left: 1rem;
-  border-left: .5rem solid var(--color-pantone);
+  border-left: .5rem solid var(--color-light-gray);
 
   &.right {
     float: right;
