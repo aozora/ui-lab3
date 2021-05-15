@@ -10,13 +10,10 @@
 
   @media screen and (max-width: 479px) {
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100); // https://www.bram.us/2020/05/06/100vh-in-safari-on-ios/
     min-height: 100vh;
-    /* iOS mobile viewport fix */
-    min-height: -webkit-fill-available;
-    //margin-left: -12px;
     margin-top: 0;
     margin-bottom: 10vh;
-    //padding-bottom: 64px;
     width: 100vw;
   }
 

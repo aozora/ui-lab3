@@ -1,6 +1,11 @@
 import gsap from 'gsap';
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 import styles from './Hero.module.scss';
+
+const setVh = () => {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+};
 
 const Hero = () => {
   const titleRef = useRef();
@@ -11,6 +16,16 @@ const Hero = () => {
 
   const timeline = useMemo(() => {
     return gsap.timeline({ paused: true });
+  }, []);
+
+  useLayoutEffect(() => {
+    window.addEventListener('load', setVh);
+    window.addEventListener('resize', setVh);
+
+    return () => {
+      window.removeEventListener('load', setVh);
+      window.removeEventListener('resize', setVh);
+    };
   }, []);
 
   useEffect(() => {
