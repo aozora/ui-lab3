@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import { useLayoutEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import styles from './Hero.module.scss';
 
 const Hero = () => {
@@ -13,7 +13,7 @@ const Hero = () => {
     return gsap.timeline({ paused: true });
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (isClient && pictureRef.current) {
       gsap.set(titleRef.current, { y: '100%' });
 
