@@ -31,14 +31,28 @@ const Hero = () => {
       timeline.to(pictureRef.current, {
         delay: 0.2,
         duration: 2,
-        y: '-50%',
+        y: '-44%',
         ease: 'power1.out'
       });
-      timeline.to([titleRef.current, subTitleRef.current], {
-        y: 0,
-        duration: 1,
-        ease: 'power1.out'
-      });
+      timeline.fromTo(
+        [titleRef.current],
+        { y: '110%' },
+        {
+          y: 0,
+          duration: 1,
+          ease: 'power1.out'
+        }
+      );
+      timeline.fromTo(
+        [subTitleRef.current],
+        { y: '110%' },
+        {
+          y: 0,
+          duration: 1,
+          ease: 'power1.out'
+        },
+        '-=0.5'
+      );
       timeline.to(
         marqueeRef.current,
         {

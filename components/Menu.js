@@ -3,7 +3,9 @@ import styles from './Menu.module.scss';
 const Menu = () => {
   return (
     <header className={styles.Menu}>
-      <a href="/">Gantan</a>
+      <a className={styles.MenuBrand} href="/">
+        Gantan
+      </a>
       <nav>
         <ul>
           <li className={styles.MenuItem}>

@@ -9,6 +9,12 @@
   padding: 8px 4vw 0 4vw;
   z-index: 99;
 
+  @media screen and (max-width: 479px) {
+    height: 15vw;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
   ul {
     display: flex;
     justify-content: flex-start;
@@ -16,12 +22,21 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+    @media screen and (max-width: 479px) {
+      display: none;
+    }
   }
 
 }
 
-.Menu_Brand {
+.MenuBrand {
   font-family: var(--heading-font-family);
+  font-weight: 700;
+  line-height: .9em;
+  color: var(--color-dark-gray);
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .MenuItem {
